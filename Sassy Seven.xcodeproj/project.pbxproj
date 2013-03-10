@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F0E36A7016EC28DB001623AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E36A6F16EC28DB001623AB /* UIKit.framework */; };
+		F0E36A7216EC28DB001623AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E36A7116EC28DB001623AB /* Foundation.framework */; };
+		F0E36A7416EC28DB001623AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E36A7316EC28DB001623AB /* CoreGraphics.framework */; };
+		F0E36A7A16EC28DB001623AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0E36A7816EC28DB001623AB /* InfoPlist.strings */; };
+		F0E36A7C16EC28DB001623AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E36A7B16EC28DB001623AB /* main.m */; };
+		F0E36A8016EC28DB001623AB /* SassySevenAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E36A7F16EC28DB001623AB /* SassySevenAppDelegate.m */; };
+		F0E36A8216EC28DB001623AB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E36A8116EC28DB001623AB /* Default.png */; };
+		F0E36A8416EC28DB001623AB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E36A8316EC28DB001623AB /* Default@2x.png */; };
+		F0E36A8616EC28DB001623AB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E36A8516EC28DB001623AB /* Default-568h@2x.png */; };
+		F0E36A8916EC28DB001623AB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E36A8716EC28DB001623AB /* MainStoryboard.storyboard */; };
+		F0E36A8C16EC28DB001623AB /* SassySevenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E36A8B16EC28DB001623AB /* SassySevenViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F0E36A6C16EC28DB001623AB /* Sassy Seven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sassy Seven.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0E36A6F16EC28DB001623AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F0E36A7116EC28DB001623AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F0E36A7316EC28DB001623AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F0E36A7716EC28DB001623AB /* Sassy Seven-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sassy Seven-Info.plist"; sourceTree = "<group>"; };
+		F0E36A7916EC28DB001623AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F0E36A7B16EC28DB001623AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F0E36A7D16EC28DB001623AB /* Sassy Seven-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sassy Seven-Prefix.pch"; sourceTree = "<group>"; };
+		F0E36A7E16EC28DB001623AB /* SassySevenAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SassySevenAppDelegate.h; sourceTree = "<group>"; };
+		F0E36A7F16EC28DB001623AB /* SassySevenAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SassySevenAppDelegate.m; sourceTree = "<group>"; };
+		F0E36A8116EC28DB001623AB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F0E36A8316EC28DB001623AB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F0E36A8516EC28DB001623AB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F0E36A8816EC28DB001623AB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		F0E36A8A16EC28DB001623AB /* SassySevenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SassySevenViewController.h; sourceTree = "<group>"; };
+		F0E36A8B16EC28DB001623AB /* SassySevenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SassySevenViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0E36A6916EC28DB001623AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0E36A7016EC28DB001623AB /* UIKit.framework in Frameworks */,
+				F0E36A7216EC28DB001623AB /* Foundation.framework in Frameworks */,
+				F0E36A7416EC28DB001623AB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F0E36A6316EC28DB001623AB = {
+			isa = PBXGroup;
+			children = (
+				F0E36A7516EC28DB001623AB /* Sassy Seven */,
+				F0E36A6E16EC28DB001623AB /* Frameworks */,
+				F0E36A6D16EC28DB001623AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F0E36A6D16EC28DB001623AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0E36A6C16EC28DB001623AB /* Sassy Seven.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0E36A6E16EC28DB001623AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0E36A6F16EC28DB001623AB /* UIKit.framework */,
+				F0E36A7116EC28DB001623AB /* Foundation.framework */,
+				F0E36A7316EC28DB001623AB /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0E36A7516EC28DB001623AB /* Sassy Seven */ = {
+			isa = PBXGroup;
+			children = (
+				F0E36A7E16EC28DB001623AB /* SassySevenAppDelegate.h */,
+				F0E36A7F16EC28DB001623AB /* SassySevenAppDelegate.m */,
+				F0E36A8716EC28DB001623AB /* MainStoryboard.storyboard */,
+				F0E36A8A16EC28DB001623AB /* SassySevenViewController.h */,
+				F0E36A8B16EC28DB001623AB /* SassySevenViewController.m */,
+				F0E36A7616EC28DB001623AB /* Supporting Files */,
+			);
+			path = "Sassy Seven";
+			sourceTree = "<group>";
+		};
+		F0E36A7616EC28DB001623AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0E36A7716EC28DB001623AB /* Sassy Seven-Info.plist */,
+				F0E36A7816EC28DB001623AB /* InfoPlist.strings */,
+				F0E36A7B16EC28DB001623AB /* main.m */,
+				F0E36A7D16EC28DB001623AB /* Sassy Seven-Prefix.pch */,
+				F0E36A8116EC28DB001623AB /* Default.png */,
+				F0E36A8316EC28DB001623AB /* Default@2x.png */,
+				F0E36A8516EC28DB001623AB /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0E36A6B16EC28DB001623AB /* Sassy Seven */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0E36A8F16EC28DB001623AB /* Build configuration list for PBXNativeTarget "Sassy Seven" */;
+			buildPhases = (
+				F0E36A6816EC28DB001623AB /* Sources */,
+				F0E36A6916EC28DB001623AB /* Frameworks */,
+				F0E36A6A16EC28DB001623AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sassy Seven";
+			productName = "Sassy Seven";
+			productReference = F0E36A6C16EC28DB001623AB /* Sassy Seven.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0E36A6416EC28DB001623AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SassySeven;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Serpent Software";
+			};
+			buildConfigurationList = F0E36A6716EC28DB001623AB /* Build configuration list for PBXProject "Sassy Seven" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F0E36A6316EC28DB001623AB;
+			productRefGroup = F0E36A6D16EC28DB001623AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0E36A6B16EC28DB001623AB /* Sassy Seven */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0E36A6A16EC28DB001623AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0E36A7A16EC28DB001623AB /* InfoPlist.strings in Resources */,
+				F0E36A8216EC28DB001623AB /* Default.png in Resources */,
+				F0E36A8416EC28DB001623AB /* Default@2x.png in Resources */,
+				F0E36A8616EC28DB001623AB /* Default-568h@2x.png in Resources */,
+				F0E36A8916EC28DB001623AB /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0E36A6816EC28DB001623AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0E36A7C16EC28DB001623AB /* main.m in Sources */,
+				F0E36A8016EC28DB001623AB /* SassySevenAppDelegate.m in Sources */,
+				F0E36A8C16EC28DB001623AB /* SassySevenViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F0E36A7816EC28DB001623AB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0E36A7916EC28DB001623AB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F0E36A8716EC28DB001623AB /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0E36A8816EC28DB001623AB /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0E36A8D16EC28DB001623AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F0E36A8E16EC28DB001623AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0E36A9016EC28DB001623AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sassy Seven/Sassy Seven-Prefix.pch";
+				INFOPLIST_FILE = "Sassy Seven/Sassy Seven-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F0E36A9116EC28DB001623AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sassy Seven/Sassy Seven-Prefix.pch";
+				INFOPLIST_FILE = "Sassy Seven/Sassy Seven-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0E36A6716EC28DB001623AB /* Build configuration list for PBXProject "Sassy Seven" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0E36A8D16EC28DB001623AB /* Debug */,
+				F0E36A8E16EC28DB001623AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0E36A8F16EC28DB001623AB /* Build configuration list for PBXNativeTarget "Sassy Seven" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0E36A9016EC28DB001623AB /* Debug */,
+				F0E36A9116EC28DB001623AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F0E36A6416EC28DB001623AB /* Project object */;
+}
