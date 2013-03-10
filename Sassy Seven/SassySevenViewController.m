@@ -28,7 +28,7 @@
 {
     if( !_phrases )
     {
-        _phrases = [[NSArray alloc] initWithObjects:@"Phrase 1", @"Phrase 2", @"Phrase 3", nil];
+        _phrases = [[NSArray alloc] initWithObjects:@"Does it look like I even care?", @"Phrase 2", @"Phrase 3", nil];
     }
     return _phrases;
 }
