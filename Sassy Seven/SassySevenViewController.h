@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SassySevenViewController : UIViewController
+@interface SassySevenViewController : UIViewController;
+
+@property (strong, nonatomic) IBOutlet UIView *mainView;
+
+@property (weak, nonatomic) IBOutlet UILabel *phraseLabel;
 
 @end
