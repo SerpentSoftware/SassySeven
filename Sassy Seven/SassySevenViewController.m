@@ -23,9 +23,14 @@
 @synthesize phrases = _phrases;
 @synthesize phraseLabel = _phraseLabel;
 @synthesize sevenImageView = _sevenImageView;
+@synthesize ballContainerView = _ballContainerView;
 
 -(NSArray *)phrases
 {
+    /*
+     Girl Don't Even
+     
+     */
     if( !_phrases )
     {
         _phrases = [[NSArray alloc] initWithObjects:@"Does it look like I even care?", @"Phrase 2", @"Phrase 3", nil];
@@ -49,10 +54,14 @@
 }
 -(void)animateFromSplashToMain
 {
-    [UIView beginAnimations:nil context:nil]; // animate the following:
-    self.sevenImageView.center = self.mainView.center;
-    [UIView setAnimationDuration:2];
-    [UIView commitAnimations];
+    [UIView animateWithDuration:0.25 animations:^{
+        self.ballContainerView.center = self.mainView.center;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.25 animations:^{
+            self.sevenImageView.alpha = 0.00;
+            self.phraseLabel.alpha = 1.00;
+        }];
+    }];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -77,6 +86,10 @@
 {
     [self resignFirstResponder];
     [super viewDidDisappear:animated];
+}
+-(void)viewDidLoad
+{
+    self.phraseLabel.alpha = 0.00;
 }
 -(BOOL)canBecomeFirstResponder
 {

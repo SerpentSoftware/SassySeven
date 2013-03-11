@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UIView *mainView;
 @property (weak, nonatomic) IBOutlet UIImageView *sevenImageView;
+@property (weak, nonatomic) IBOutlet UIView *ballContainerView;
 
 @property (weak, nonatomic) IBOutlet UILabel *phraseLabel;
 
