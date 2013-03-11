@@ -21,8 +21,8 @@
 
 @synthesize mainView = _mainView;
 @synthesize phrases = _phrases;
-
 @synthesize phraseLabel = _phraseLabel;
+@synthesize sevenImageView = _sevenImageView;
 
 -(NSArray *)phrases
 {
@@ -46,6 +46,18 @@
         self.mainView.backgroundColor = [UIColor blackColor];
         self.phraseLabel.textColor = UIColor.whiteColor;
     }
+}
+-(void)animateFromSplashToMain
+{
+    [UIView beginAnimations:nil context:nil]; // animate the following:
+    self.sevenImageView.center = self.mainView.center;
+    [UIView setAnimationDuration:2];
+    [UIView commitAnimations];
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self animateFromSplashToMain];
 }
 
 -(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
