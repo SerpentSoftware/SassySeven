@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVAudioPlayer.h>
 
 @interface PlayViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UIView *ballView;
+@property (weak, nonatomic) IBOutlet UIImageView *glareImage;
+@property (weak, nonatomic) IBOutlet UIImageView *ballImage;
+
+@property (weak, nonatomic) IBOutlet UILabel *phraseLabel;
+
+
+@property (nonatomic, retain) AVAudioPlayer *player;
 
 @end

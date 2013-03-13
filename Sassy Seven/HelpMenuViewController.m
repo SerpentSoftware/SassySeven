@@ -15,6 +15,13 @@
 @implementation HelpMenuViewController
 
 - (IBAction)homePressed {
+    
+    // in the corresponding .h file:
+    // @property (nonatomic, retain) AVAudioPlayer *player;
+    
+    // in the .m file:
+
+    
     [self dismissModalViewControllerAnimated:NO];
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F079395516ED5FFA007D38A0 /* Billard1.png in Resources */ = {isa = PBXBuildFile; fileRef = F079395416ED5FFA007D38A0 /* Billard1.png */; };
+		F0AF125D16EF54F100743D71 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AF125C16EF54F100743D71 /* home.png */; };
 		F0E36A7016EC28DB001623AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E36A6F16EC28DB001623AB /* UIKit.framework */; };
 		F0E36A7216EC28DB001623AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E36A7116EC28DB001623AB /* Foundation.framework */; };
 		F0E36A7416EC28DB001623AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E36A7316EC28DB001623AB /* CoreGraphics.framework */; };
@@ -18,9 +20,25 @@
 		F0E36A8616EC28DB001623AB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E36A8516EC28DB001623AB /* Default-568h@2x.png */; };
 		F0E36A8916EC28DB001623AB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E36A8716EC28DB001623AB /* MainStoryboard.storyboard */; };
 		F0E36A8C16EC28DB001623AB /* SassySevenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E36A8B16EC28DB001623AB /* SassySevenViewController.m */; };
+		F0E7614616EEEB4C00BA8E0F /* Billard3.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E7614516EEEB4C00BA8E0F /* Billard3.png */; };
+		F0E7614816EEEF0400BA8E0F /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E7614716EEEF0400BA8E0F /* 7.png */; };
+		F0F16E7F16F0032D00D7EF58 /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F16E7E16F0032D00D7EF58 /* PlayViewController.m */; };
+		F0F16E8116F0095900D7EF58 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F16E8016F0095900D7EF58 /* ball.png */; };
+		F0F16E8316F0233800D7EF58 /* blackback.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F16E8216F0233800D7EF58 /* blackback.png */; };
+		F0F16E8616F026D800D7EF58 /* PhraseBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F16E8516F026D800D7EF58 /* PhraseBrain.m */; };
+		F0F16E8816F02C1600D7EF58 /* AppSounds in Resources */ = {isa = PBXBuildFile; fileRef = F0F16E8716F02C1600D7EF58 /* AppSounds */; };
+		F0F16E8A16F02D6F00D7EF58 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F16E8916F02D6F00D7EF58 /* AVFoundation.framework */; };
+		F0F16E8E16F041A900D7EF58 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F16E8D16F041A900D7EF58 /* Icon.png */; };
+		F0F16E9016F041E000D7EF58 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F16E8F16F041E000D7EF58 /* Icon@2x.png */; };
+		F0FB310416EF95CC008B42DE /* HelpMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FB310316EF95CC008B42DE /* HelpMenuViewController.m */; };
+		F0FB310916EFEDAC008B42DE /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0FB310816EFEDAC008B42DE /* background.jpg */; };
+		F0FB310B16EFEE8C008B42DE /* glare.png in Resources */ = {isa = PBXBuildFile; fileRef = F0FB310A16EFEE8C008B42DE /* glare.png */; };
+		F0FB310D16EFF0A0008B42DE /* glare2.png in Resources */ = {isa = PBXBuildFile; fileRef = F0FB310C16EFF0A0008B42DE /* glare2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F079395416ED5FFA007D38A0 /* Billard1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Billard1.png; sourceTree = "<group>"; };
+		F0AF125C16EF54F100743D71 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = ../../../../../Downloads/home.png; sourceTree = "<group>"; };
 		F0E36A6C16EC28DB001623AB /* Sassy Seven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sassy Seven.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E36A6F16EC28DB001623AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F0E36A7116EC28DB001623AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +55,23 @@
 		F0E36A8816EC28DB001623AB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F0E36A8A16EC28DB001623AB /* SassySevenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SassySevenViewController.h; sourceTree = "<group>"; };
 		F0E36A8B16EC28DB001623AB /* SassySevenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SassySevenViewController.m; sourceTree = "<group>"; };
+		F0E7614516EEEB4C00BA8E0F /* Billard3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Billard3.png; path = ../../../../../Downloads/Billard3.png; sourceTree = "<group>"; };
+		F0E7614716EEEF0400BA8E0F /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 7.png; path = ../../../../../Downloads/7.png; sourceTree = "<group>"; };
+		F0F16E7D16F0032D00D7EF58 /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
+		F0F16E7E16F0032D00D7EF58 /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
+		F0F16E8016F0095900D7EF58 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ball.png; path = ../../../../../Downloads/ball.png; sourceTree = "<group>"; };
+		F0F16E8216F0233800D7EF58 /* blackback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blackback.png; path = ../../../../../Downloads/blackback.png; sourceTree = "<group>"; };
+		F0F16E8416F026D800D7EF58 /* PhraseBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhraseBrain.h; sourceTree = "<group>"; };
+		F0F16E8516F026D800D7EF58 /* PhraseBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhraseBrain.m; sourceTree = "<group>"; };
+		F0F16E8716F02C1600D7EF58 /* AppSounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppSounds; sourceTree = "<group>"; };
+		F0F16E8916F02D6F00D7EF58 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F0F16E8D16F041A900D7EF58 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		F0F16E8F16F041E000D7EF58 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		F0FB310216EF95CC008B42DE /* HelpMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpMenuViewController.h; sourceTree = "<group>"; };
+		F0FB310316EF95CC008B42DE /* HelpMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpMenuViewController.m; sourceTree = "<group>"; };
+		F0FB310816EFEDAC008B42DE /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = ../../../../../Downloads/background.jpg; sourceTree = "<group>"; };
+		F0FB310A16EFEE8C008B42DE /* glare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glare.png; path = ../../../../../Downloads/glare.png; sourceTree = "<group>"; };
+		F0FB310C16EFF0A0008B42DE /* glare2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glare2.png; path = ../../../../../Downloads/glare2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F16E8A16F02D6F00D7EF58 /* AVFoundation.framework in Frameworks */,
 				F0E36A7016EC28DB001623AB /* UIKit.framework in Frameworks */,
 				F0E36A7216EC28DB001623AB /* Foundation.framework in Frameworks */,
 				F0E36A7416EC28DB001623AB /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +92,8 @@
 		F0E36A6316EC28DB001623AB = {
 			isa = PBXGroup;
 			children = (
+				F0F16E8F16F041E000D7EF58 /* Icon@2x.png */,
+				F0F16E8D16F041A900D7EF58 /* Icon.png */,
 				F0E36A7516EC28DB001623AB /* Sassy Seven */,
 				F0E36A6E16EC28DB001623AB /* Frameworks */,
 				F0E36A6D16EC28DB001623AB /* Products */,
@@ -73,6 +111,7 @@
 		F0E36A6E16EC28DB001623AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0F16E8916F02D6F00D7EF58 /* AVFoundation.framework */,
 				F0E36A6F16EC28DB001623AB /* UIKit.framework */,
 				F0E36A7116EC28DB001623AB /* Foundation.framework */,
 				F0E36A7316EC28DB001623AB /* CoreGraphics.framework */,
@@ -86,6 +125,12 @@
 				F0E36A7E16EC28DB001623AB /* SassySevenAppDelegate.h */,
 				F0E36A7F16EC28DB001623AB /* SassySevenAppDelegate.m */,
 				F0E36A8716EC28DB001623AB /* MainStoryboard.storyboard */,
+				F0F16E7D16F0032D00D7EF58 /* PlayViewController.h */,
+				F0F16E7E16F0032D00D7EF58 /* PlayViewController.m */,
+				F0F16E8416F026D800D7EF58 /* PhraseBrain.h */,
+				F0F16E8516F026D800D7EF58 /* PhraseBrain.m */,
+				F0FB310216EF95CC008B42DE /* HelpMenuViewController.h */,
+				F0FB310316EF95CC008B42DE /* HelpMenuViewController.m */,
 				F0E36A8A16EC28DB001623AB /* SassySevenViewController.h */,
 				F0E36A8B16EC28DB001623AB /* SassySevenViewController.m */,
 				F0E36A7616EC28DB001623AB /* Supporting Files */,
@@ -96,6 +141,16 @@
 		F0E36A7616EC28DB001623AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F0F16E8716F02C1600D7EF58 /* AppSounds */,
+				F0F16E8216F0233800D7EF58 /* blackback.png */,
+				F0F16E8016F0095900D7EF58 /* ball.png */,
+				F0FB310C16EFF0A0008B42DE /* glare2.png */,
+				F0FB310A16EFEE8C008B42DE /* glare.png */,
+				F0FB310816EFEDAC008B42DE /* background.jpg */,
+				F079395416ED5FFA007D38A0 /* Billard1.png */,
+				F0E7614716EEEF0400BA8E0F /* 7.png */,
+				F0AF125C16EF54F100743D71 /* home.png */,
+				F0E7614516EEEB4C00BA8E0F /* Billard3.png */,
 				F0E36A7716EC28DB001623AB /* Sassy Seven-Info.plist */,
 				F0E36A7816EC28DB001623AB /* InfoPlist.strings */,
 				F0E36A7B16EC28DB001623AB /* main.m */,
@@ -164,6 +219,18 @@
 				F0E36A8416EC28DB001623AB /* Default@2x.png in Resources */,
 				F0E36A8616EC28DB001623AB /* Default-568h@2x.png in Resources */,
 				F0E36A8916EC28DB001623AB /* MainStoryboard.storyboard in Resources */,
+				F079395516ED5FFA007D38A0 /* Billard1.png in Resources */,
+				F0E7614616EEEB4C00BA8E0F /* Billard3.png in Resources */,
+				F0E7614816EEEF0400BA8E0F /* 7.png in Resources */,
+				F0AF125D16EF54F100743D71 /* home.png in Resources */,
+				F0FB310916EFEDAC008B42DE /* background.jpg in Resources */,
+				F0FB310B16EFEE8C008B42DE /* glare.png in Resources */,
+				F0FB310D16EFF0A0008B42DE /* glare2.png in Resources */,
+				F0F16E8116F0095900D7EF58 /* ball.png in Resources */,
+				F0F16E8316F0233800D7EF58 /* blackback.png in Resources */,
+				F0F16E8816F02C1600D7EF58 /* AppSounds in Resources */,
+				F0F16E8E16F041A900D7EF58 /* Icon.png in Resources */,
+				F0F16E9016F041E000D7EF58 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +244,9 @@
 				F0E36A7C16EC28DB001623AB /* main.m in Sources */,
 				F0E36A8016EC28DB001623AB /* SassySevenAppDelegate.m in Sources */,
 				F0E36A8C16EC28DB001623AB /* SassySevenViewController.m in Sources */,
+				F0FB310416EF95CC008B42DE /* HelpMenuViewController.m in Sources */,
+				F0F16E7F16F0032D00D7EF58 /* PlayViewController.m in Sources */,
+				F0F16E8616F026D800D7EF58 /* PhraseBrain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +334,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sassy Seven/Sassy Seven-Prefix.pch";
 				INFOPLIST_FILE = "Sassy Seven/Sassy Seven-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -275,7 +347,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sassy Seven/Sassy Seven-Prefix.pch";
 				INFOPLIST_FILE = "Sassy Seven/Sassy Seven-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -299,6 +373,7 @@
 				F0E36A9116EC28DB001623AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

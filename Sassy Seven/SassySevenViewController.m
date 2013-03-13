@@ -45,6 +45,7 @@
      I'd like to agree, but I'd be wrong
      I'm busy now, could I ignore you later?
      
+     Please? I been done that
      */
     if( !_phrases )
     {
@@ -102,8 +103,18 @@
 }
 
 - (IBAction)playToched {
-    [self animateFromSplashToMain];
-    //UIViewController *helpMenu = [[_parentViewController. alloc] init];
+    //[self animateFromSplashToMain];
+    [UIView animateWithDuration:.2 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^(void) {
+        self.sevenBallView.center = CGPointMake( 500.0, self.sevenBallView.center.y );
+        self.sevenImage.transform = CGAffineTransformMakeRotation(M_PI_2);
+    } completion:^(BOOL finished) {
+        if( finished )
+        {
+            HelpMenuViewController *hmvc = [self.storyboard instantiateViewControllerWithIdentifier:@"pvc"];
+            [self presentModalViewController:hmvc animated:NO];
+            NSLog(@"Done %g, %g", self.sevenBallView.center.x, self.sevenBallView.center.y);
+        }
+    }];
 }
 - (IBAction)helpTouched {
     [UIView animateWithDuration:.2 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^(void) {
