@@ -11,8 +11,13 @@
 @interface SassySevenViewController : UIViewController;
 
 @property (strong, nonatomic) IBOutlet UIView *mainView;
-@property (weak, nonatomic) IBOutlet UIImageView *sevenImageView;
-@property (weak, nonatomic) IBOutlet UIView *ballContainerView;
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@property (weak, nonatomic) IBOutlet UIView *sevenBallView;
+@property (weak, nonatomic) IBOutlet UIImageView *sevenImage;
+
+@property (weak, nonatomic) IBOutlet UIView *menuButtonsView;
 
 @property (weak, nonatomic) IBOutlet UILabel *phraseLabel;
 
