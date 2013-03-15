@@ -78,6 +78,7 @@
 		F0E36A8616EC28DB001623AB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E36A8516EC28DB001623AB /* Default-568h@2x.png */; };
 		F0E36A8916EC28DB001623AB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E36A8716EC28DB001623AB /* MainStoryboard.storyboard */; };
 		F0E36A8C16EC28DB001623AB /* SassySevenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E36A8B16EC28DB001623AB /* SassySevenViewController.m */; };
+		F0ECB2DD16F39526009E2247 /* mike_background.png in Resources */ = {isa = PBXBuildFile; fileRef = F0ECB2DC16F39526009E2247 /* mike_background.png */; };
 		F0F16E7F16F0032D00D7EF58 /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F16E7E16F0032D00D7EF58 /* PlayViewController.m */; };
 		F0F16E8616F026D800D7EF58 /* PhraseBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F16E8516F026D800D7EF58 /* PhraseBrain.m */; };
 		F0F16E8816F02C1600D7EF58 /* AppSounds in Resources */ = {isa = PBXBuildFile; fileRef = F0F16E8716F02C1600D7EF58 /* AppSounds */; };
@@ -164,6 +165,7 @@
 		F0E36A8816EC28DB001623AB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F0E36A8A16EC28DB001623AB /* SassySevenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SassySevenViewController.h; sourceTree = "<group>"; };
 		F0E36A8B16EC28DB001623AB /* SassySevenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SassySevenViewController.m; sourceTree = "<group>"; };
+		F0ECB2DC16F39526009E2247 /* mike_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mike_background.png; sourceTree = "<group>"; };
 		F0F16E7D16F0032D00D7EF58 /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
 		F0F16E7E16F0032D00D7EF58 /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
 		F0F16E8416F026D800D7EF58 /* PhraseBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhraseBrain.h; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 		F0E36A7616EC28DB001623AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F0ECB2DC16F39526009E2247 /* mike_background.png */,
 				F002B80016F134C900BDF984 /* back.png */,
 				F002B80216F134D500BDF984 /* Help.png */,
 				F002B81016F16DC700BDF984 /* holyball.png */,
@@ -435,6 +438,7 @@
 				F002B87316F18DBA00BDF984 /* background.jpg in Resources */,
 				F002B87516F18DCF00BDF984 /* home.png in Resources */,
 				F002B87716F18DF800BDF984 /* Icon@2x.png in Resources */,
+				F0ECB2DD16F39526009E2247 /* mike_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
