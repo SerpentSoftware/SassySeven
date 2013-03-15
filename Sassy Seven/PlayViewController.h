@@ -15,7 +15,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *glareImage;
 @property (weak, nonatomic) IBOutlet UIImageView *ballImage;
 
+@property (weak, nonatomic) IBOutlet UIView *rotatingView;
 @property (weak, nonatomic) IBOutlet UILabel *phraseLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *bubbleImage;
 
 
 @property (nonatomic, retain) AVAudioPlayer *player;

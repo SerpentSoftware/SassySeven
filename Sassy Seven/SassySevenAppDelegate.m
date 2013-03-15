@@ -10,6 +10,15 @@
 
 @implementation SassySevenAppDelegate
 
+@synthesize motionManager = _motionManager;
+
+-(CMMotionManager *)motionManager {
+    if (!_motionManager) {
+        _motionManager = [[CMMotionManager alloc] init];
+    }
+    return _motionManager;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.

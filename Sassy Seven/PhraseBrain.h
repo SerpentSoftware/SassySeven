@@ -11,5 +11,6 @@
 @interface PhraseBrain : NSObject
 
 - (NSString *)getRandomPhrase;
+- (NSString *)getSoundFilePath;
 
 @end
