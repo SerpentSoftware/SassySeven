@@ -290,6 +290,36 @@
         <image name="home.png" width="128" height="128"/>
         <image name="triangle.png" width="544" height="463"/>
     </resources>
+    <classes>
+        <class className="HelpMenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HelpMenuViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PlayViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="ballImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="ballView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="bubbleImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="glareImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="phraseLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="rotatingView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="SassySevenViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SassySevenViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mainView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="menuButtonsView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="phraseLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sevenBallView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="sevenImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

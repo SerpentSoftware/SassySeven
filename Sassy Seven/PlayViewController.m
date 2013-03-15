@@ -77,7 +77,7 @@ static BOOL L0AccelerationIsShaking(UIAcceleration* last, UIAcceleration* curren
             CGFloat newY = 150 * (data.acceleration.y + 1);
             CGFloat newX = 300 - 150 * (data.acceleration.x + 1);
             NSLog(@"%g,%g", newX, newY);
-            self.bubbleImage.frame = CGRectMake(newX, newY, self.bubbleImage.frame.size.width, self.bubbleImage.frame.size.height);
+            //self.bubbleImage.frame = CGRectMake(newX, newY, self.bubbleImage.frame.size.width, self.bubbleImage.frame.size.height);
         });
     }];
 }
