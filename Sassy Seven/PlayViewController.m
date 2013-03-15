@@ -16,6 +16,8 @@
 @property (readonly, nonatomic) PhraseBrain *brain;
 @property (nonatomic) NSInteger numberOfShakes;
 @property (nonatomic) BOOL isAnimating;
+@property (nonatomic) BOOL viewHasAnimatedIn;
+
 - (void)phoneShook;
 
 @end
@@ -27,6 +29,7 @@
 @synthesize glareImage = _glareImage;
 
 @synthesize rotatingView = _rotatingView;
+@synthesize fadingView = _fadingView;
 @synthesize phraseLabel = _phraseLabel;
 @synthesize bubbleImage = _bubbleImage;
 
@@ -53,49 +56,29 @@
     }
     return _brain;
 }
-/*  
-static BOOL L0AccelerationIsShaking(UIAcceleration* last, UIAcceleration* current, double threshold) {
-	double
-    deltaX = fabs(last.x - current.x),
-    deltaY = fabs(last.y - current.y),
-    deltaZ = fabs(last.z - current.z);
-    
-	return
-    (deltaX > threshold && deltaY > threshold) ||
-    (deltaX > threshold && deltaZ > threshold) ||
-    (deltaY > threshold && deltaZ > threshold);
-}*/
 
 
-
-#define MOVE_FACTOR 5
+#define MOVE_FACTOR 60
 #define MOVE_DISTANCE 150
 
 - (void)startMotion {
     [self.motionManager startAccelerometerUpdatesToQueue:[[NSOperationQueue alloc] init] withHandler:^(CMAccelerometerData *data, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^(void) {
-            CGFloat newY = 150 * (data.acceleration.y + 1);
-            CGFloat newX = 300 - 150 * (data.acceleration.x + 1);
-            NSLog(@"%g,%g", newX, newY);
-            //self.bubbleImage.frame = CGRectMake(newX, newY, self.bubbleImage.frame.size.width, self.bubbleImage.frame.size.height);
+            
+            
+            
+            CGFloat targetY = 150 * (data.acceleration.y + 1);
+            CGFloat targetX = 300 - 150 * (data.acceleration.x + 1);
+            
+            CGFloat newX = self.bubbleImage.frame.origin.x + ( (targetX - self.bubbleImage.frame.origin.x) / MOVE_FACTOR );
+            CGFloat newY = self.bubbleImage.frame.origin.y + ( (targetY - self.bubbleImage.frame.origin.y) / MOVE_FACTOR );
+
+            self.fadingView.transform = CGAffineTransformMakeRotation( (M_PI_2/180) * (data.acceleration.x * 30) );
+            
+            self.bubbleImage.frame = CGRectMake(newX, newY, self.bubbleImage.frame.size.width, self.bubbleImage.frame.size.height);
         });
     }];
 }
-
-/* One dimentional bubble level function
-   Angle would be => atan2(accelerationY, accelerationX)
- 
-- (void)updateBubbleForAngle:(float)angle {
-    float halfVialLength = 320.0 / 2;
-    float zoomAngle = angle * 4 ;  // real bubble floats up more rapidly than sine function
-    
-    if (zoomAngle > kMaxAngle) zoomAngle = kMaxAngle ;   // stop at the end
-	if (zoomAngle < -kMaxAngle) zoomAngle = -kMaxAngle ; // stop at the other end
-    
-    float newY = self.center.y - sin(DegreesToRadians(zoomAngle)) * halfVialLength;
-    
-    bubbleView.center=CGPointMake(self.center.x, newY);
-}*/
 
 - (IBAction)homePressed {
     [self animateOut:^(BOOL fin) {
@@ -107,17 +90,19 @@ static BOOL L0AccelerationIsShaking(UIAcceleration* last, UIAcceleration* curren
 }
 
 - (void)animateIn {
-    self.ballView.center = CGPointMake(800, self.view.center.y);
-    self.rotatingView.transform = CGAffineTransformMakeRotation(M_PI);
+    self.ballView.center = CGPointMake(800, self.ballView.center.y);
+    self.fadingView.transform = CGAffineTransformMakeRotation(M_PI);
     
-    [UIView animateWithDuration:.5 animations:^(void) {
-        self.rotatingView.transform = CGAffineTransformMakeRotation(M_PI_2);
+    [UIView animateWithDuration:1 animations:^(void) {
+        self.fadingView.transform = CGAffineTransformMakeRotation(M_PI_2);
     }completion:^(BOOL fin) {
-        self.rotatingView.transform = CGAffineTransformIdentity;
+        [UIView animateWithDuration:1 animations:^(void) {
+            self.fadingView.transform = CGAffineTransformIdentity;
+        }];
     }];
     
     [UIView animateWithDuration:1 animations:^(void) {
-        self.ballView.center = self.view.center;
+        self.ballView.center = CGPointMake(self.view.center.x, self.ballView.center.y);
     } completion:^(BOOL finished) {
         
     }];
@@ -145,13 +130,6 @@ static BOOL L0AccelerationIsShaking(UIAcceleration* last, UIAcceleration* curren
     [self.player play];
 }
 
-/*- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-    //NSLog(@"derp");
-    if( motion == UIEventSubtypeMotionShake ) {
-        //[self phoneShook];
-    }
-}*/
-
 - (void)viewDidAppear:(BOOL)animated {
     [self becomeFirstResponder];
     [super viewDidAppear:animated];
@@ -162,6 +140,8 @@ static BOOL L0AccelerationIsShaking(UIAcceleration* last, UIAcceleration* curren
     UIAccelerometer *accelerometer = [UIAccelerometer sharedAccelerometer];
     accelerometer.delegate=(id)self;
     accelerometer.updateInterval = 10.0f/60.0f;
+    self.bubbleImage.alpha = .50;
+    self.bubbleImage.opaque = NO;
     
     self.numberOfShakes = 0;
     self.isAnimating = NO;
@@ -188,6 +168,7 @@ static BOOL L0AccelerationIsShaking(UIAcceleration* last, UIAcceleration* curren
     [self setBallImage:nil];
     [self setBubbleImage:nil];
     [self setRotatingView:nil];
+    [self setFadingView:nil];
     [super viewDidUnload];
 }
 -(BOOL)canBecomeFirstResponder {
@@ -202,8 +183,8 @@ static BOOL L0AccelerationIsShaking(UIAcceleration* last, UIAcceleration* curren
         // Fade triangle out
         // Possible problem - bubble will fade as well
         [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^(void) {
-        self.rotatingView.alpha = 0.00;
-        self.rotatingView.opaque = NO;
+        self.fadingView.alpha = 0.00;
+        self.fadingView.opaque = NO;
         } completion:^(BOOL finished) {}];
         
         // Set text and play sound
@@ -211,11 +192,11 @@ static BOOL L0AccelerationIsShaking(UIAcceleration* last, UIAcceleration* curren
         
         // Fade back in
         [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^(void) {
-            self.rotatingView.alpha = 1;
+            self.fadingView.alpha = 1;
         } completion:^(BOOL finished) {
             [self playSound:[self.brain getSoundFilePath]];
             
-            self.rotatingView.opaque = YES;
+            self.fadingView.opaque = YES;
             self.isAnimating = NO;
         }];
     }
