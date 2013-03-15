@@ -134,7 +134,7 @@
 {
     [self fadeInButtons];
     
-    self.sevenBallView.center = CGPointMake( 500.0, self.sevenBallView.center.y );
+    self.sevenBallView.center = CGPointMake( self.view.frame.size.width + self.sevenBallView.frame.size.width / 2, self.sevenBallView.center.y );
     self.sevenImage.transform = CGAffineTransformMakeRotation(M_PI);
     
     [UIView animateWithDuration:3 animations:^(void) {
@@ -154,7 +154,7 @@
     }];
     
     [UIView animateWithDuration:1 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^(void) {
-        self.sevenBallView.center = CGPointMake( 211 , self.sevenBallView.center.y );
+        self.sevenBallView.center = CGPointMake( self.view.frame.size.width - 139 , self.sevenBallView.center.y );
     } completion:^(BOOL finished) {
         if( finished )
         {

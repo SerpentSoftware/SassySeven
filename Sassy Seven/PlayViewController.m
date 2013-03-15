@@ -16,7 +16,7 @@
 @property (readonly, nonatomic) PhraseBrain *brain;
 @property (nonatomic) NSInteger numberOfShakes;
 @property (nonatomic) BOOL isAnimating;
-@property (nonatomic) BOOL viewHasAnimatedIn;
+@property (nonatomic) BOOL onScreen;
 
 - (void)phoneShook;
 
@@ -26,7 +26,6 @@
 
 @synthesize ballView = _ballView;
 @synthesize ballImage = _ballImage;
-@synthesize glareImage = _glareImage;
 
 @synthesize rotatingView = _rotatingView;
 @synthesize fadingView = _fadingView;
@@ -37,6 +36,7 @@
 @synthesize brain = _brain;
 @synthesize numberOfShakes = _numberOfShakes;
 @synthesize isAnimating = _isAnimating;
+@synthesize onScreen = _onScreen;
 
 
 - (CMMotionManager *)motionManager {
@@ -65,17 +65,17 @@
     [self.motionManager startAccelerometerUpdatesToQueue:[[NSOperationQueue alloc] init] withHandler:^(CMAccelerometerData *data, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             
-            
-            
-            CGFloat targetY = 150 * (data.acceleration.y + 1);
-            CGFloat targetX = 300 - 150 * (data.acceleration.x + 1);
-            
-            CGFloat newX = self.bubbleImage.frame.origin.x + ( (targetX - self.bubbleImage.frame.origin.x) / MOVE_FACTOR );
-            CGFloat newY = self.bubbleImage.frame.origin.y + ( (targetY - self.bubbleImage.frame.origin.y) / MOVE_FACTOR );
+            if( self.onScreen ) {
+                CGFloat targetY = 150 * (data.acceleration.y + 1);
+                CGFloat targetX = 300 - 150 * (data.acceleration.x + 1);
+                
+                CGFloat newX = self.bubbleImage.frame.origin.x + ( (targetX - self.bubbleImage.frame.origin.x) / MOVE_FACTOR );
+                CGFloat newY = self.bubbleImage.frame.origin.y + ( (targetY - self.bubbleImage.frame.origin.y) / MOVE_FACTOR );
 
-            self.fadingView.transform = CGAffineTransformMakeRotation( (M_PI_2/180) * (data.acceleration.x * 30) );
-            
-            self.bubbleImage.frame = CGRectMake(newX, newY, self.bubbleImage.frame.size.width, self.bubbleImage.frame.size.height);
+                self.fadingView.transform = CGAffineTransformMakeRotation( (M_PI_2/180) * (data.acceleration.x * 30) );
+                
+                self.bubbleImage.frame = CGRectMake(newX, newY, self.bubbleImage.frame.size.width, self.bubbleImage.frame.size.height);
+            }
         });
     }];
 }
@@ -106,8 +106,17 @@
     } completion:^(BOOL finished) {
         
     }];
+    self.onScreen = YES;
 }
-- (void)animateOut:(void ( ^ )(BOOL))finished {   
+- (void)animateOut:(void ( ^ )(BOOL))finished {
+    self.onScreen = NO;
+    [UIView animateWithDuration:1 animations:^(void) {
+        self.fadingView.transform = CGAffineTransformMakeRotation(M_PI_2);
+    }completion:^(BOOL fin) {
+        [UIView animateWithDuration:1 animations:^(void) {
+            self.fadingView.transform = CGAffineTransformMakeRotation(M_PI);
+        }];
+    }];
     [UIView animateWithDuration:1 animations:^(void) {
         self.ballView.center = CGPointMake(800, self.view.center.y);
     } completion:finished];
@@ -164,7 +173,6 @@
 - (void)viewDidUnload {
     [self setBallView:nil];
     [self setPhraseLabel:nil];
-    [self setGlareImage:nil];
     [self setBallImage:nil];
     [self setBubbleImage:nil];
     [self setRotatingView:nil];
@@ -177,7 +185,7 @@
 
 -(void)phoneShook
 {
-    if (self.isAnimating == NO)
+    if (self.isAnimating == NO && self.onScreen)
     {
         self.isAnimating = YES;
         // Fade triangle out
